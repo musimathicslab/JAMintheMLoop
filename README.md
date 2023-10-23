@@ -2,9 +2,9 @@
 
 ### A Musician-aid tool based on Transformer models for jam session-like music generation.
 
-<center> 
+<p align='center'> 
     <img src=https://github.com/musimathicslab/JAMintheMLoop/assets/52039988/7bf38b1c-293b-4662-a5aa-34a35c9f7703 width=200>
-</center>
+</p>
 
 ### https://jaminthemloop.yuribrandi.com/
 **JAMintheMLoop is a free, open-source web tool that simulates a Jam session with a music-generating AI.**

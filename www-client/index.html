@@ -1,0 +1,117 @@
+
+<!--Copyright 2023 Yuri Brandi. All rights reserved.
+Published on GitHub under the GNU GPL v3. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JAMintheMLoop</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.svg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    
+    <!--Latest version of javascript magenta music library available here https://github.com/magenta/magenta-js/tree/master/music -->
+  </head>
+  <body>
+    <header>
+      <a href="."><img id="logo" src="favicon.svg" alt="home"></a>
+      <h1>JAMintheMLoop</h1>
+    </header>
+
+    <header id="head-buttons">
+      <button id="settings">
+        <i class="fa-solid fa-gear"></i>
+      </button>
+      <button id="infos">
+        <i class="fa-solid fa-info"></i>
+      </button>
+    </header>
+
+    
+    <p id="record">
+      <button>Start&nbsp;&nbsp;<i class="fa-solid fa-music"></i></button>
+      <button><i class="fa-solid fa-rotate-right"></i></button>
+      <button><a><i class="fa-solid fa-download"></i></a></button>
+      <button><img src="loading.svg"/></button>
+    </p>
+
+    <div id="loading_text">
+      <p>Placeholder</p>
+      <p>My turn&nbsp;&nbsp;<i class="fa-solid fa-robot"></i></p>
+    </div>
+
+    <p id="counter">
+      
+    </p>
+    <div id="canvas-container">
+      <canvas id="waveform">
+
+      </canvas>
+    </div>
+    <p id="stop">
+      <button><i class="fa-solid fa-stop"></i></button>
+    </p>
+
+    <!--DEBUG ZONE-->
+    <a hidden id="rawSource">Download raw source audio</a></br></br>
+    <a hidden id="midiSource">Download midi source</a></br></br>
+    <a hidden id="midiOutput">Download midi continuation (output)</a>
+   
+
+    <div id="info-modal">
+      <div class="modal-content">
+        <i class="fa-solid fa-x"></i>
+        <img id="logo" src="favicon.svg">
+        <img id="logo" src="logo-unisa.png">
+        </br></br>
+        <p>
+          <strong>
+            Copyright (c) 2023 Yuri Brandi. All rights reserved.</br></br> 
+            Published on <a href="https://github.com/musimathicslab/JAMintheMLoop" target=”_blank”>GitHub <i class="fa-brands fa-github"></a></i> under the GNU GPLv3.
+          </strong>
+        </p>
+        </br>
+        <p>
+          <strong>
+            Powered by <a href="https://magenta.tensorflow.org/" target=”_blank”>Magenta</a>.
+          </strong>
+        </p>
+        </br>
+        <p>
+          <strong>
+            Special thanks to my dear friend Adriano Bellerino for designing JAMintheMLoop's icon.
+          </strong>
+        </p>
+      </div>
+    </div>
+
+    <div id="settings-modal">
+      <div class="modal-content">
+        <i class="fa-solid fa-x"></i>
+        <p>
+          <h2>
+            Languages <i class="fa-solid fa-language"></i>
+          </h2>
+          <ul>
+            <li><strong>English</strong> 🇬🇧 / 🇺🇸 <i class="fa-solid fa-check"></i></li>
+            <li><a href="#"><strong>Italian (Italiano)</strong> 🇮🇹</a></li>
+          </ul>
+            <h2>
+              <input unchecked type="checkbox" id="debug_mode" value="true">
+              <label for="debug_mode">Debug Mode <i class="fa-solid fa-bug"></i></label>
+            </h2>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
+<!-- REPLACE ME <script src="https://kit.fontawesome.com/123456789.js" crossorigin="anonymous"></script> REPLACE ME-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<script src="scripts/script.js"></script> 
+<script src="scripts/waveformer.js"></script>
+<script src="scripts/modalscript.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@magenta/music@1.23.1"></script>
+<script src='//www.midijs.net/lib/midi.js'></script>

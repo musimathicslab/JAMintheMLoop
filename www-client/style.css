@@ -1,0 +1,228 @@
+body {
+    background-color: #1F2732;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+header {
+    text-align: center;
+}
+
+header > h1 {
+
+    font-family: 'Gloria Hallelujah', Cursive;
+    color: white;
+}
+
+img#logo {
+    height: 9rem;
+
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+
+}
+
+a > img#logo:hover {
+    height: 10rem;
+    cursor: pointer;
+}
+
+#head-buttons {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+#infos, #settings {
+  font-size: 1.2rem;
+  width: 2.4rem;
+  height: 2.4rem;
+
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 0;
+
+  box-shadow: 0 0 2rem 1px rgba(0, 0, 0, 0.25);
+  background-color: #1F2732;
+  filter: brightness(1.2);
+  backdrop-filter: blur(2rem) brightness(0.9);
+  border: none;
+  color: white;
+
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+#settings {
+  margin-right: .5rem;
+}
+
+#infos:hover, #settings:hover {
+  color: #999;
+}
+
+
+p#record, #loading_text > p {
+  text-align: center;
+}
+
+p#record > button, #stop > button {
+  min-width: 8rem;
+  min-height: 3rem;
+  font-size: 2.5rem;
+  font-family: 'Montserrat', sans-serif;
+
+  padding: 1rem;
+  border-radius: 1.2rem;
+  cursor: pointer;
+  margin-top: 10rem;
+
+  box-shadow: 0 0 2rem 1px rgba(0, 0, 0, 0.25);
+  background-color: #1F2732;
+  filter: brightness(1.2);
+  backdrop-filter: blur(2rem) brightness(0.9);
+  border: none;
+  color: white;
+
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+
+p#record > button:hover {
+  font-size: 2.8rem;
+}
+
+p#record > button:nth-child(4) {
+  background-color: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+  cursor: default;
+}
+
+p#record > button:first-child {
+  display: none;
+}
+
+#stop > button, p#record > button:nth-child(2), p#record > button:nth-child(3) {
+  display: none;
+  min-width: auto;
+  min-height: auto;
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  margin-top: auto;
+}
+
+
+#stop > button:hover, p#record > button:nth-child(2):hover, p#record > button:nth-child(3):hover {
+  font-size: 2.8rem;
+  width: 5.6rem;
+  height: 5.6rem;
+}
+
+
+@supports (-webkit-touch-callout: none) { /*iOS only*/
+	p#record > button:hover {
+		font-size: 2.5rem;
+	}
+	
+}
+
+#counter, #stop{
+  font-size: 4rem;
+  color: white;
+  margin-top: 10rem;
+  text-align: center;
+}
+
+#stop {
+  margin-top: 5rem;
+}
+
+#canvas-container {
+  display: none;
+  text-align: center;
+}
+
+
+@media only screen and (min-width: 768px) {
+  #waveform {
+    width: 40%;
+    aspect-ratio: 3/1;
+  }
+}
+
+@media only screen and (min-width: 1720px) {
+  #waveform {
+    width: 20%;
+    aspect-ratio: 3/1;
+  }
+}
+
+a {
+  color: white;
+}
+
+#info-modal, #settings-modal {
+
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    backdrop-filter: blur(5px) brightness(0.8);
+  }
+
+.modal-content {
+  background-color: #1F2732;
+  filter: brightness(1.2);
+  color: white;
+  border-radius: 1rem;
+
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  /*border: 1px solid #888;*/
+  width: 80%; /* Could be more or less, depending on screen size */
+
+  
+}
+
+.fa-x {
+  color: white;
+  float: right;
+  font-size: .7rem;
+
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+.fa-x:hover,
+.fa-x:focus {
+  color: #999;
+  cursor: pointer;
+}
+
+input#debug_mode {
+  transform: scale(1.5);
+
+  vertical-align: middle;
+  position: relative;
+  bottom: .1rem;
+}
+
+#loading_text {
+  display: none;
+}
+
+#loading_text > p {
+  font-size: 2.5rem;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+
+#loading_text > p:nth-child(1) {
+  font-size: 1.8rem;
+}

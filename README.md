@@ -112,7 +112,7 @@ Since this project uses ``TensorFlow 1.15.x``, a Python version < 3.8 is needed.
 
     > Note: as probably warned by your *CLI*, this method is not meant for *deployment to prodution*. Please use a web server such as Gunicorn or Apache + *wsgi_mod* for that purpose.
 
-    > Note #2: do **not** delete the ``temp_files`` folder: this is where MIDI files are "temporarily" stored when received. For debugging purposes, however, they are not currently deleted after being processed; you can change this behaviour by adding a file deletion instruction in [jaminthemloop.py](Flask-back-end/jaminthemloop.py)
+    > Note #2: do **not** delete the ``temp_files`` folder: this is where MIDI files are "temporarily" stored when received. For debugging purposes, however, they are not currently being deleted after being processed; you can change this behaviour by adding a file deletion instruction in [jaminthemloop.py](Flask-back-end/jaminthemloop.py)
     
 
 

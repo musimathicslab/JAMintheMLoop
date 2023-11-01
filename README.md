@@ -88,10 +88,18 @@ Since this project uses ``TensorFlow 1.15.x``, a Python version < 3.8 is needed.
     ```bash 
     pip install flask
     ```
-6. The project won't run yet, as we need the Music Transformer's checkpoints. To download them you may need to [intall gsutil]() first.
+6. The project won't run yet, as we need the Music Transformer's checkpoints. To download them you may need to [intall gsutil](https://cloud.google.com/storage/docs/gsutil_install) first.
 
+    Create an empty folder called ``model`` inside the [Flask-back-end](Flask-back-end) folder.
+
+     ```bash
+    mkdir model
+    ```
+
+   Now download the checkpoints inside the ``model`` folder.
+   
     ```bash
-    gsutil -q -m cp -r gs://magentadata/models/music_transformer/checkpoints/*
+    gsutil -q -m cp -r gs://magentadata/models/music_transformer/checkpoints/* path_to/Flask-back-end/model
     ```
 
     This command should download 6 files in total. But we only need these 3: 
@@ -102,9 +110,7 @@ Since this project uses ``TensorFlow 1.15.x``, a Python version < 3.8 is needed.
     >
     > melody_conditioned_model_16.ckpt.meta
 
-    Move them inside the empty ``model`` folder. 
-
-7. Change directory to the [Back-end folder](Flask-back-end) and start your Flask service (remember to activate your venv)
+8. Change directory to the [Back-end folder](Flask-back-end) and start your Flask service (remember to activate your venv)
     ```bash 
     python jaminthemloop.py
     ```

@@ -1,7 +1,9 @@
 from flask import Flask, request, send_file
 import os
 import time
-import generate_melody as model
+import generate_melody as model_class
+
+model = model_class.MusicTransformer()
 app = Flask(__name__)
 
 @app.route("/generate_melody", methods=['POST'])
@@ -13,8 +15,10 @@ def do_gen():
         generated_filename = str(time.time()) + ".mid"
         os.rename(file_path, 'temp_files/' + generated_filename)
         
+
+        #return send_file('9maggio.mid', mimetype='audio/midi', as_attachment=True)
         cont_path = model.generate_continuation('temp_files/' + generated_filename)
-        
+        #midiFile = open(cont_path, 'rb')
         return send_file(cont_path, mimetype='audio/midi', as_attachment=True)
     else:
         print("file not here")

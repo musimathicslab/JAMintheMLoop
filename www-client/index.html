@@ -30,18 +30,9 @@ Published on GitHub under the GNU GPL v3. -->
       </button>
     </header>
 
+    <p id="AI_turn_text" class="turn_text">My turn&nbsp;&nbsp;<i class="fa-solid fa-robot"></i></p>
+    <p id="user_turn_text" class="turn_text">Your turn!&nbsp;&nbsp;<i class="fa-solid fa-music"></i></p>
     
-    <p id="record">
-      <button>Start&nbsp;&nbsp;<i class="fa-solid fa-music"></i></button>
-      <button><i class="fa-solid fa-rotate-right"></i></button>
-      <button><a><i class="fa-solid fa-download"></i></a></button>
-      <button><img src="loading.svg"/></button>
-    </p>
-
-    <div id="loading_text">
-      <p>Placeholder</p>
-      <p>My turn&nbsp;&nbsp;<i class="fa-solid fa-robot"></i></p>
-    </div>
 
     <p id="counter">
       
@@ -51,9 +42,14 @@ Published on GitHub under the GNU GPL v3. -->
 
       </canvas>
     </div>
-    <p id="stop">
+
+    <p id="record">
+      <button>Start&nbsp;&nbsp;<i class="fa-solid fa-music"></i></button>
       <button><i class="fa-solid fa-stop"></i></button>
+      <button><img src="loading.svg"/></button>
     </p>
+    
+
 
     <!--DEBUG ZONE-->
     <a hidden id="rawSource">Download raw source audio</a></br></br>
@@ -108,9 +104,9 @@ Published on GitHub under the GNU GPL v3. -->
     </div>
   </body>
 </html>
-<!-- REPLACE ME <script src="https://kit.fontawesome.com/123456789.js" crossorigin="anonymous"></script> REPLACE ME-->
+<script src="https://kit.fontawesome.com/23bb9e21f8.js" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-<script src="scripts/script.js"></script> 
+<script src="scripts/script.js?v=3.63"></script> 
 <script src="scripts/waveformer.js"></script>
 <script src="scripts/modalscript.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@magenta/music@1.23.1"></script>

@@ -11,10 +11,13 @@
 
 This is a thesis work based on the [Magenta JavaScript API](https://github.com/magenta/magenta-js), specifically on the [Onsets and Frames](https://arxiv.org/abs/1710.11153) model and on the [Music Transformer](https://arxiv.org/abs/1809.04281) model: the former allows a recording to be transcribed into a MIDI file (locally by the means of magenta.js), the latter is deployed on a server (w/ [Gunicorn](https://gunicorn.org/) + [Flask](https://flask.palletsprojects.com/)) and can generate conditioned compositions based on existing MIDI melodies.
 
-## Demo 
+## Demos
 
-[![Demo Video](https://img.youtube.com/vi/TRlaz2bqPj4/maxresdefault.jpg)](https://youtu.be/TRlaz2bqPj4)
+### Demo #1
+[![Demo Video #1](https://img.youtube.com/vi/TRlaz2bqPj4/maxresdefault.jpg)](https://youtu.be/TRlaz2bqPj4)
 
+### Demo #2
+[![Demo Video #2](https://img.youtube.com/vi/nDc0e3-i-ZE/maxresdefault.jpg)](https://youtu.be/nDc0e3-i-ZE)
 
 ## Contributions
 
